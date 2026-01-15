@@ -169,6 +169,9 @@ export default defineConfig({
   mock: {
     include: ['mock/**/*', 'src/pages/**/_mock.ts'],
   },
+  utoopack: {
+    devtool: false, // 禁用 source map
+  },
   /**
    * @name 是否开启 mako
    * @description 使用 mako 极速研发

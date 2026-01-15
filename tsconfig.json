@@ -9,7 +9,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "declaration": true,
+    "declaration": false, //打包时是否生成 .d.ts 声明文件且处理 config.ts 的类型报错
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
