@@ -140,6 +140,12 @@ const Login: React.FC = () => {
           defaultMessage: '登录成功！',
         });
         message.success(defaultLoginSuccessMessage);
+
+        // 存储 JWT Token 到 localStorage
+        if (msg.token) {
+          localStorage.setItem('token', msg.token);
+        }
+
         await fetchUserInfo();
         const urlParams = new URL(window.location.href).searchParams;
         window.location.href = urlParams.get('redirect') || '/';
