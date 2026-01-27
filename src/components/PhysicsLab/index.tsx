@@ -269,13 +269,14 @@ const PhysicsLab: React.FC = () => {
 
     // 处理全局 mouseup 以防止鼠标在画布外松开时产生的“粘滞”拖拽问题
     const handleGlobalMouseUp = () => {
-      if (mouse.button === 0 || mouse.button === -1) {
-        // @ts-expect-error - 访问内部状态强制释放
-        mouse.button = -1;
-        // @ts-expect-error
-        mouse.sourceEvents.mousedown = null;
-        // @ts-expect-error
-        mouse.sourceEvents.mouseup = null;
+      const m = mouse as any;
+      if (m.button === 0 || m.button === -1) {
+        // 访问内部状态强制释放
+        m.button = -1;
+        if (m.sourceEvents) {
+          m.sourceEvents.mousedown = null;
+          m.sourceEvents.mouseup = null;
+        }
       }
     };
 
