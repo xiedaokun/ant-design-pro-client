@@ -70,6 +70,12 @@ export default [
         path: '/dashboard/workplace',
         component: './dashboard/workplace',
       },
+      {
+        name: 'test',
+        icon: 'smile',
+        path: '/dashboard/test',
+        component: './dashboard/test',
+      },
     ],
   },
   {
