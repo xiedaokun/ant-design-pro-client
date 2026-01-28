@@ -70,12 +70,6 @@ export default [
         path: '/dashboard/workplace',
         component: './dashboard/workplace',
       },
-      {
-        name: 'test',
-        icon: 'smile',
-        path: '/dashboard/test',
-        component: './dashboard/test',
-      },
     ],
   },
   {
@@ -260,6 +254,23 @@ export default [
         icon: 'smile',
         path: '/account/settings',
         component: './account/settings',
+      },
+    ],
+  },
+  {
+    path: '/animation-demo',
+    name: 'animation-demo',
+    icon: 'PlayCircleOutlined',
+    routes: [
+      {
+        path: '/animation-demo',
+        redirect: '/animation-demo/google-labs',
+      },
+      {
+        name: 'google-labs',
+        icon: 'smile',
+        path: '/animation-demo/google-labs',
+        component: './animation-demo/google-labs',
       },
     ],
   },
